@@ -1,3 +1,5 @@
+import Callout from 'nextra-theme-docs/callout'
+
 # A clueless newbie's guide to headless CMS and the Jamstack
 ### March 4, 2021
 
@@ -27,7 +29,7 @@ I'd been a fly on the wall for conversations on Twitter about headless CMS and t
 
 *Me, two months ago, if you'd asked me about headless CMS:*
 
-"It's like, a different way of doing a CMS than how WordPress does it. I think? Like it's just the admin-panel part of WordPress I guess, and you use APIs somehow to connect that to your front end, which can be built however you want. But then this guy's over here talking to me about headless WordPress so like, :dizzy_face:?"
+> "It's like, a different way of doing a CMS than how WordPress does it. I think? Like it's just the admin-panel part of WordPress I guess, and you use APIs somehow to connect that to your front end, which can be built however you want. But then this guy's over here talking to me about headless WordPress so like, ...?"
 
 Actually, that's not a terrible understanding of it, in retrospect.
 
@@ -61,7 +63,9 @@ And since WP is built with PHP, it requires a fair amount of work from the serve
 
 When you go headless, the biggest change is that your front end, back end, and database all exist as independent entities.
 
+<Callout>
 Jamstackers describe this as [*decoupling*](https://jamstack.org/glossary/decoupling/) the "presentation layer" (front end) from the "logic/data layer" (back end and database).
+</Callout>
 
 Most headless CMS look and feel a lot like the WordPress admin panel, if you're familiar with that. And with good reason: like said, it ain't broke! No need to reinvent the wheel on that one.
 
@@ -134,10 +138,10 @@ WordPress is a battle-tested traditional CMS that can handle pretty much anythin
 
 That said, if you're seeking a superior developer experience and greater flexibility, I think the Jamstack with a headless CMS is the way to go.
 
-It's also worth noting that I've mostly been describing cloud-hosted services here. Some headless CMS options like [Strapi](https://strapi.io/) are self-hosted, meaning you still have your decoupled layers, but they all live together on your server. This may be preferable for some applications.
+It's also worth noting that I've mostly been describing cloud-hosted services here. Some headless CMS options like Ghost and [Strapi](https://strapi.io/) are self-hosted, meaning you still have your decoupled layers, but they all live together on your server. This may be preferable for some applications.
 
 *Also* also: yes, headless WordPress is a thing. In essence, you get all the benefits of decoupling but you get to keep the wp-admin panel. I'm told WP has one of the best APIs out there! Worth considering.
 
-(My stack of choice? Next.js, styled with Tailwind, plugged into [Prismic CMS](https://www.prismic.io). Your mileage may vary, but this setup works great for me, and it's a breeze to set up!)
+(My stack of choice? Next.js, styled with Tailwind, plugged into Ghost CMS on Heroku with their one-click installation. Your mileage may vary, but this setup works great for me, and it's a breeze to set up!)
 
 I hope this introductory guide has helped to shed some light on this rather esoteric topic. If you have any questions - or you just want to take me to task for something I've misunderstood here - please don't hesitate to reach out!

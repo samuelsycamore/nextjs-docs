@@ -1,4 +1,6 @@
-# [Nextra](https://nextra.vercel.app)
+# Sam Sycamore Technical Writer Portfolio
+
+## Built with [Nextra](https://nextra.vercel.app)
 
 _Warning: this project is not production ready, API might change without notice._
 
