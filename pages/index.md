@@ -1,10 +1,11 @@
-## Welcome
+## Welcome ![](/sun-outline.svg)
 
-**Thanks for stopping in!** I'm a software engineer and technical writer based in the Santa Cruz Mountains of California. I love to learn so that I can teach. [Click here to view my CV](https://sycamore-cv.vercel.app).
+**Thanks for stopping by!** I'm a software engineer and technical writer based in the Santa Cruz Mountains of California. I love to learn so that I can teach. [Click here to view my CV](https://sycamore-cv.vercel.app).
 
 ## Technical Skills
-* Version control w/ Git, Github
+* Version control w/ Git & [Github](https://www.github.com/samuelsycamore)
 * Command line interface
+* HTML / CSS / Markdown
 * JavaScript / React / Node
 * SSGs: Next.js
 * Headless CMS: Ghost / Prismic / Forestry / Dato
@@ -25,9 +26,9 @@ I'm working with local business owners to upgrade their web presence to modern s
 ## Previously
 I've been involved with online startups as a freelance writer and editor since 2012.
 
-In 2016 I launched my own lifestyle brand, *The Good Life Revival*. Through this venture I grew a listener-supported podcast to 5000+ downloads per month, 2000+ newsletter subscribers, and 20k+ monthly site visitors.
+In 2016 I launched my own lifestyle brand, [*The Good Life Revival*](http://thegoodliferevival.com). Through this venture I grew a listener-supported podcast to 5000+ downloads per month, 2000+ newsletter subscribers, and 20k+ monthly site visitors.
 
-I taught botany and taxonomy to hundreds of people through my two books, *Foraging North America* (2019) and *Introduction to Foraging* (2018).
+I taught botany and taxonomy to hundreds of people through my two books, [*Foraging North America*](/foraging-north-america.md) (2019) and [*Introduction to Foraging*](/intro-foraging.md) (2018).
 
 Here's what one of my students had to say after a mentorship program I ran:
 

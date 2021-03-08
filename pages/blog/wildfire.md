@@ -1,3 +1,8 @@
+# Wildfire refugee to web developer: my journey
+### Feb 17, 2021
+
+![CZU Lightning Complex Fires, via Wikipedia](/czu-fires.jpg)
+
 Picture this: 
 
 Charred leaves and ash rain down from the sky, covering your front porch in a kind of post-apocalyptic snow.
@@ -64,6 +69,8 @@ That day came in February 2021. Over the previous month, I had learned the basic
 
 I returned to the tutorial video, and to my pleasant surprise I found it not only *comprehensible* but actually kind of, well, *simple.*
 
+![NASA EONET Tracker App](/eonet-desktop.png)
+
 I followed the instructor note-for-note the first time around, then deleted the code and started over. I couldn't match it perfectly on my own, but got close enough painting in broad strokes that I was satisfied with what I'd learned. I even expanded the functionality to include other natural events like severe storms, floods, and earthquakes.
 
 Granted: the Traversy app is *very* bare-bones, and orders of magnitude less complex than what companies like Zonehaven are building, without a doubt.
@@ -73,7 +80,3 @@ But it was a huge eye-opener for me to see that I really did possess the skills 
 What an incredible power to be able to wield!
 
 That's when I knew that I'd be in this for the long haul.
-
-* * *
-
-*Thanks for reading! Is your team in need of a new JavaScript developer? Does your company value high-quality documentation & public-facing communication? Let's talk! [My DMs are open on Twitter](https://www.twitter.com/tanoaksam).*

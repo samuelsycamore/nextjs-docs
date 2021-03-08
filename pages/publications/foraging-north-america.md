@@ -1,1 +1,0 @@
-# Foraging North America

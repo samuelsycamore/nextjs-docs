@@ -1,25 +1,13 @@
-# "My freelancing workflow, from cold leads to paid invoices"
+# My freelancing workflow, from cold leads to paid invoices
+### Jan 31, 2021
 
-date: "2021-01-31"
-desc: "Everything I've learned about how to get started as a freelance web developer."
----
+![My home office in the woods](/cabin-room.jpg)
 
-<div>
-           <Image
-              src="/images/cabin-room.jpg"
-              height={554}
-              width={640}
-              alt="My home office"
-            />
-</div>
-
-In January 2021, I made a sudden and somewhat unexpected transition to freelance web development.
-
-I had been headed in this direction since I started learning web dev in the fall of 2020, but an unforeseeable injury forced me to resign from my job in landscape construction at the start of the new year. I wasn't sure if I was ready to seek work as a developer, but the universe said:
+In January 2021, I made a sudden transition to freelance web development. I wasn't sure if I was ready to seek work as a developer, but the universe said:
 
 "It's now or never."
 
-After reviewing over 500 websites in my vertical (more on that momentarily), I selected 100 businesses to cold-email with a pitch offering my services. 
+After reviewing over 500 websites in my vertical, I selected 100 businesses to cold-email with a pitch offering my services. 
 
 Eight got back to me: five were retired, three were interested. I walked away from one of those interested after receiving a low-ball offer, and the other two requested proposals outlining the scope of work and my rates.
 
@@ -35,19 +23,15 @@ Please keep in mind that I am anything but an expert! And nothing here constitut
 
 My results here are definitely not statistically significant, and I look forward to gaining more experience so that I might be able to share more accurate numbers in the future in terms of what others might expect. I just want to help mellow out the learning curve so other people can get up and running quickly.
 
-Ideally, some of y'all will take this and improve upon what I've laid out here! Please let me know if you have a better solution than what I suggest!
-
-Also: some of the services I will recommend are *not* free. I wish I had free alternatives, but often the "alternative" is just to invest countless hours of tedious labor into something that would otherwise cost like $20 to automate in an instant.
+Some of the services I will recommend are *not* free. I wish I had free alternatives, but often the "alternative" is just to invest countless hours of tedious labor into something that would otherwise cost $10-20 to automate in an instant.
 
 That said, as someone who's been self-employed in other industries, I can say that web development requires exceptionally low startup costs relative to the return on your investment. If you are willing to part with $50-100 in your first month, you'll be fully equipped to efficiently land deals worth thousands of bucks.
-
-## My Freelancing Workflow - Marketing & Sales
 
 My freelancing pal [@natmiletic](https://twitter.com/natmiletic) pointed this out, and I really believe it has been crucial to my early wins: 
 
 **I have been very intentional about who I am targeting and what's unique about what I offer.**
 
-### Pick a Vertical
+## Pick a Vertical
 
 Your vertical market is the clientele that you will target who all serve similar clients themselves; think gyms, restaurants, plumbers, barber shops. 
 
@@ -71,9 +55,9 @@ Picking a vertical might not be as simple for you as it was for me. Things to co
 
 ...and you should be charging for each of these services in your proposals, commensurate with your experience! More on proposals as we dig deeper.
 
-### Generate Leads
+## Generate Leads
 
-I use [d7leadfinder](https://d7leadfinder.com) to generate lists of businesses in my vertical from the cities in my region. S/o to [@PaikCapital](https://twitter.com/PaikCapital) for making me aware of this tool.
+I use [d7leadfinder](https://d7leadfinder.com) to generate lists of businesses in my vertical from the cities in my region.
 
 It costs $25/month and can potentially give you more prospects in a single day than you would be able to handle in a year.
 
@@ -107,7 +91,7 @@ What was my criteria?
 
 Once I had 100 prospects that I identified as genuinely in need of a new website, I moved them all to a new spreadsheet and started getting my marketing materials ready.
 
-### Craft a Pitch
+## Craft a Pitch
 
 The best clients will be the ones who already know that they need your services. You don't need to convince them of the value of your work, and you will be solving a big problem for them by reaching out with your services. 
 
@@ -117,29 +101,29 @@ I'll share my first email template with you, but first I want to say that, after
 
 ---
 
-Hi (person),
-
-I recently came across your website and was curious if you would be interested in help with your web presence.
-
-As a landscaper in Santa Cruz myself — I’ve been in the industry for several years now — I know how to reach the kinds of clientele you serve, and how to build websites that bring in more leads.
-
-If you’ve been thinking about upgrading your site, I can offer a sleek, stylish, lightning-fast design that’s mobile-responsive and indexed properly for Google and other search engines to improve your rankings.
-
-Over 50% of all web traffic happens on smartphones these days, and if your website is not optimized for small screens then you’re losing out on the majority of visitors.
-
-You can see a sample of the kinds of sites I build here:
-https://restoretheredwoods.netlify.app/
-
-And if you want to learn more you can check out my portfolio:
-https://www.samuelsycamore.com/
-
-If you’re interested, let’s schedule a time to chat about this. I look forward to hearing from you!
-
-Happy new year,
-
-Sam Sycamore
-// web developer & designer
-www.samuelsycamore.com
+> Hi (person),
+> 
+> I recently came across your website and was curious if you would be interested in help with your web presence.
+> 
+> As a landscaper in Santa Cruz myself — I’ve been in the industry for several years now — I know how to reach the kinds of clientele you serve, and how to build websites that bring in more leads.
+> 
+> If you’ve been thinking about upgrading your site, I can offer a sleek, stylish, lightning-fast design that’s mobile-responsive and indexed properly for Google and other search engines to improve your rankings.
+> 
+> Over 50% of all web traffic happens on smartphones these days, and if your website is not optimized for small screens then you’re losing out on the majority of visitors.
+> 
+> You can see a sample of the kinds of sites I build here:
+> (link to demo site)
+> 
+> And if you want to learn more you can check out my portfolio:
+> (link to my portfolio)
+> 
+> If you’re interested, let’s schedule a time to chat about this. I look forward to hearing from you!
+> 
+> Sam Sycamore
+>
+> // web developer & designer
+>
+> www.samuelsycamore.com
 
 ---
 
@@ -189,20 +173,23 @@ Something like this:
 
 ---
 
-Hi (person),
-
-Did you know that (name of business)'s website is really tough to use on a phone?
-
-I ask because solving this problem is what I do best - crafting smart-phone friendly websites that will impress your visitors for many years to come, no matter the screen size.
-
-My clients get overwhelmingly positive feedback from their customers when my sites deploy.
-
-I'd love to set up a time to talk more about this. Are you free next Monday or Tuesday at 11?
-
-Best,
-Sam Sycamore
-*Founder, Sycamore Design*
-www.sycamore.design
+> Hi (person),
+> 
+> Did you know that (name of business)'s website is really tough to use on a phone?
+> 
+> I ask because solving this problem is what I do best - crafting smart-phone friendly websites that will impress your visitors for many years to come, no matter the screen size.
+> 
+> My clients get overwhelmingly positive feedback from their customers when my sites deploy.
+> 
+> I'd love to set up a time to talk more about this. Are you free next Monday or Tuesday at 11?
+> 
+> Best,
+>
+> Sam Sycamore
+>
+> *Founder, Sycamore Design*
+>
+> www.sycamore.design
 
 
 ---
@@ -211,7 +198,7 @@ Better, right? I think so anyway. Please don't steal this wholesale! But feel fr
 
 Another upgrade coming in my next round: [GMass for Gmail](https://www.gmass.co/). For my first 100 emails I sent each one out individually and it took many hours. For $20/month, GMass will enable me to send potentially thousands of *individualized* emails with a single click, then track open and click-thru rates, and auto-send follow-ups a few days later to those who don't open the first message - all directly through Gmail! I am really excited to use it after doing it the long way first!
 
-### Sell Your Services
+## Sell Your Services
 
 Once you have a few leads who are interested in your services, you need to set up a phone call with them to determine if the project is a good fit, explain how the process works, and answer any questions they have.
 
@@ -247,7 +234,7 @@ If the client forces the price question, you need to deflect by any means necess
 
 By the end of this call, you should have a clear understanding of what the client is looking for. If you're a solid salesperson, they should be excited to receive an email proposal from you after the call, outlining the scope of the work and the fees for each service you provide.
 
-### Write a Proposal
+## Write a Proposal
 
 This part is possibly even more terrifying than the sales call, because at this point you feel like you're on the right track but now you actually have something to lose - a warm lead who's going to be turned off by your price!
 
@@ -298,7 +285,7 @@ This format seemed to work fine for me, but next time around I plan to bill for 
 
 How the heck did I arrive at these rates?
 
-#### Set Your Price
+### Set Your Price
 
 The reason it's so hard to find concrete advice about how to set your rates is that *it's mostly up to you to decide how to do it.* There is no secret formula, and what the market can bear will vary wildly between industries, demographics, regions, and continents.
 
@@ -314,7 +301,7 @@ But I would be perfectly happy with $50/hr, and this target range gave me a lot 
 
 My first project clocked in at about $75/hr, so I feel really good about this pricing strategy going into my next round of sales.
 
-### Sign a Contract
+## Sign a Contract
 
 Before you fire up Figma or write a single line of code, *you need both parties to sign a contract that clearly lays out the scope of work and what happens if either party fails to meet their obligations.*
 
@@ -326,7 +313,7 @@ So I revised that contract for American English and [posted it to my Github here
 
 I insert the relevant details into this template and upload it to HelloSign.com, which enables you and your client to register legally binding e-signatures online - no need for paper documents or faxing. This service is free for the first few, but you have to pay after you reach a certain number of contracts per month.
 
-#### Determine a Payment Schedule
+### Determine a Payment Schedule
 
 One key element of the contract is the payment schedule, which should clearly define how much your client owes you and when. I've tried two different schedules, and one has immediately emerged as the clear winner:
 
@@ -336,13 +323,13 @@ One key element of the contract is the payment schedule, which should clearly de
 
 I repeat:
 
-## **DO NOT WORK FOR FREE**
+### **DO NOT WORK FOR FREE**
 
 You must have a down payment in hand before you start the work. And you need to be paid in full before your completed site is deployed to the host. This is to prevent a bad-faith client from taking your work and using it without paying you.
 
 And you need to make this payment schedule crystal clear to your client. If not, there's a good chance that this could lead to headaches when you send an invoice that your client isn't expecting.
 
-### Receive Payments
+## Receive Payments
 
 I currently use Stripe.com to receive payments from my clients. I like that it enables me to send out professional invoices that my clients can pay using any payment method that works for them. I don't love that it takes a 3% cut off the top. If you know a better solution, I'd love to hear about it.
 
@@ -356,4 +343,4 @@ I sincerely hope you find this helpful. If you have a question that isn't answer
 
 Best of luck to you! Let me know how you fare out there - we can trade notes.
 
-*This piece was originally published on DEV.to. <a href="https://dev.to/tanoaksam/my-freelancing-workflow-from-cold-leads-to-paid-invoices-38hd" target="_blank">Click here</a> to visit and drop a comment.*
+*[This piece was originally published on DEV.to](https://dev.to/tanoaksam/my-freelancing-workflow-from-cold-leads-to-paid-invoices-38hd).*

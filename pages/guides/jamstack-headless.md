@@ -1,3 +1,8 @@
+# A clueless newbie's guide to headless CMS and the Jamstack
+### March 4, 2021
+
+![Jamstack is the modern way to build websites](/jamstack.png)
+
 As a web developer who works with small businesses to upgrade their outdated sites, I'm always on the hunt for the latest and greatest ways to improve my workflow and deliver a superior product.
 
 That said, when I first got started freelancing, I leaned on WordPress as the safe, tried-and-true option for my clients who needed a content management system (CMS) to handle a blog or portfolio.
@@ -50,7 +55,9 @@ Because WordPress is a "one-size-fits-all" option, as a developer you will somet
 
 And since WP is built with PHP, it requires a fair amount of work from the server each time a client comes by to visit. This *can* slow things down (but may be ultimately inconsequential), and it may not really be necessary for the purposes of the site - a page that never gets changed (like an 'About Us' page) just doesn't *need* to be rendered by the server every time it gets called up.
 
-## Headless CMS: Prismic, Forestry, Strapi, et al.
+## Headless CMS
+
+### Prismic, Ghost, Strapi, Forestry, et al.
 
 When you go headless, the biggest change is that your front end, back end, and database all exist as independent entities.
 
@@ -104,7 +111,7 @@ Like said: if you need something that *just works,* WordPress is a fantastic sol
 
 But if you're thinking about taking the plunge, here are some of the primary points to consider:
 
-#### PROS
+## Pros
 
 * Decoupling means greater autonomy for development & content creation teams
 * Most devs would agree that the modern JS ecosystem lends itself to the best developer experience
@@ -113,7 +120,7 @@ But if you're thinking about taking the plunge, here are some of the primary poi
 * CaaS makes your content *reusable,* meaning it can be easily delivered to multiple touch-points and presented in different ways from a single CMS source
 * Hosting is often free/very cheap, and CaaS providers usually make it relatively painless to scale up as needed
 
-#### CONS
+## Cons
 
 * You are now at the mercy of multiple third-party services instead of a single host to deliver your site/app, meaning there are more ways that things could go wrong
 * Maybe it's not *more* work than setting up a WordPress site, but there are more moving parts to address and configure, which can be overwhelming
@@ -121,7 +128,7 @@ But if you're thinking about taking the plunge, here are some of the primary poi
 * Since you're beholden to your new CaaS overlords to store and deliver your content, you will have to endure policy/feature/pricing changes that could potentially throw a wrench in your whole system at a moment's notice
 * It might not be as easy as you'd think/hope it'd be to migrate away from your chosen headless CMS in the future
 
-## The Takeaway (tl;dr)
+## The Takeaway
 
 WordPress is a battle-tested traditional CMS that can handle pretty much anything you might toss at it. *Legacy* is clearly not the only reason why it powers the lion's share of the Internet.
 
@@ -133,10 +140,4 @@ It's also worth noting that I've mostly been describing cloud-hosted services he
 
 (My stack of choice? Next.js, styled with Tailwind, plugged into [Prismic CMS](https://www.prismic.io). Your mileage may vary, but this setup works great for me, and it's a breeze to set up!)
 
-I hope this introductory guide has helped to shed some light on this rather esoteric topic. If you have any questions - or you just want to take me to task for something I've misunderstood here - please have at it in the comments below!
-
-**What's your favorite headless CMS? I've love to know!**
-
-* * *
-
-*Thanks for reading! Is your team in need of a new JavaScript developer? Does your company value high-quality documentation & public-facing communication? Let's talk! [My DMs are open on Twitter](https://www.twitter.com/tanoaksam).*
+I hope this introductory guide has helped to shed some light on this rather esoteric topic. If you have any questions - or you just want to take me to task for something I've misunderstood here - please don't hesitate to reach out!
