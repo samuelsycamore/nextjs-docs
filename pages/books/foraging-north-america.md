@@ -1,4 +1,5 @@
-# Foraging North America: The Botany, Taxonomy, and Ecology of Edible Wild Plants
+# Foraging North America
+## The Botany, Taxonomy, and Ecology of Edible Wild Plants
 
 ![Foraging North America cover](/fna-cover.jpg)
 

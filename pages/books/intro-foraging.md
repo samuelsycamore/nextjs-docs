@@ -1,4 +1,5 @@
-# Introduction to Foraging: A Beginner's Guide to Gathering Wild Foods With Confidence
+# Introduction to Foraging
+## A Beginner's Guide to Gathering Wild Foods With Confidence
 
 ![Introduction to Foraging cover](/introforaging.jpg)
 
