@@ -1,4 +1,7 @@
 {
-  "index": "What is Nextra",
-  "docs": "Nextra Docs"
+  "index": "Introduction",
+  "blog": "Who is Sam Sycamore?",
+  "guides": "Guides & Docs",
+  "publications": "Publications",
+  "contact": "Contact"
 }

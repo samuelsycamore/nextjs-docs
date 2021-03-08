@@ -1,0 +1,142 @@
+As a web developer who works with small businesses to upgrade their outdated sites, I'm always on the hunt for the latest and greatest ways to improve my workflow and deliver a superior product.
+
+That said, when I first got started freelancing, I leaned on WordPress as the safe, tried-and-true option for my clients who needed a content management system (CMS) to handle a blog or portfolio.
+
+I had been working with HTML, CSS, and vanilla JavaScript up to this point, and making the jump to PHP development with WP wasn't too difficult. 
+
+But as I was getting into WordPress, I also started learning React at the same time.
+
+And the difference was like night and day.
+
+PHP and JSX/JavaScript solve the problem of inserting logic into markup in similar ways.
+
+But from the perspective of "developer experience," once I got the hang of the modern JS dev environment and component-based building with React, I couldn't stand the thought of returning to monolithic index.html/php/css files ever again.
+
+And don't even talk to me about XAMPP/Apache/MySQL!!!
+
+I knew there must be a way to give my clients what they need while enabling me to work with the latest tools.
+
+## Headless What-Now?
+
+I'd been a fly on the wall for conversations on Twitter about headless CMS and the Jamstack, but struggled to make sense out of most of it.
+
+*Me, two months ago, if you'd asked me about headless CMS:*
+
+"It's like, a different way of doing a CMS than how WordPress does it. I think? Like it's just the admin-panel part of WordPress I guess, and you use APIs somehow to connect that to your front end, which can be built however you want. But then this guy's over here talking to me about headless WordPress so like, :dizzy_face:?"
+
+Actually, that's not a terrible understanding of it, in retrospect.
+
+But why choose a headless CMS, aside from the fact that JavaScript is just cooler than PHP? (Laravel devs, don't @ me)
+
+Why not stick to the tried-and-true, all-in-one WordPress CMS? Going headless seems like maybe just a whole lot more work to achieve the same end goal, no?
+
+To better understand what's so cool about headless CMS, first we need to have a clear understanding of how a "traditional" CMS works.
+
+## Traditional CMS: WordPress
+
+*(There are others, but really, WP is thee undisputed champ in this realm)*
+
+First, I want to say that for all the hate it gets, WordPress. Just. Works.
+
+It ain't broke, and it don't need fixin'!
+
+If WordPress meets your needs, by all means - stick with it.
+
+With a traditional CMS like WordPress, your front end, back end, and database full of content all live together as one tangled-up unit on your server. 
+
+They are inextricably bound up together, so if you want to make substantial changes to any of these layers, you often have to rebuild the whole thing from the ground up.
+
+Because WordPress is a "one-size-fits-all" option, as a developer you will sometimes find yourself at the mercy of the platform in terms of what you can build, whether you're restricted by proprietary tools, or else frustrated by unnecessary, unused bloat.
+
+And since WP is built with PHP, it requires a fair amount of work from the server each time a client comes by to visit. This *can* slow things down (but may be ultimately inconsequential), and it may not really be necessary for the purposes of the site - a page that never gets changed (like an 'About Us' page) just doesn't *need* to be rendered by the server every time it gets called up.
+
+## Headless CMS: Prismic, Forestry, Strapi, et al.
+
+When you go headless, the biggest change is that your front end, back end, and database all exist as independent entities.
+
+Jamstackers describe this as [*decoupling*](https://jamstack.org/glossary/decoupling/) the "presentation layer" (front end) from the "logic/data layer" (back end and database).
+
+Most headless CMS look and feel a lot like the WordPress admin panel, if you're familiar with that. And with good reason: like said, it ain't broke! No need to reinvent the wheel on that one.
+
+But your front-end and your CMS are no longer permanently bound up together, and they need a way to talk to each other. They do this by way of APIs.
+
+For both the developer and the content creator, decoupling means:
+
+#### FREEDOM!!
+
+Now you have myriad options for how to construct and configure each element of the puzzle. And they all function independently of one another, meaning the dev team and the content team can both focus on what they do best without stepping on their coworkers' toes.
+
+If you need to make substantial changes -- let's say you rebuild the front end, or you need to scale up the back end to meet increasing traffic -- you can do so without interrupting any of the other moving parts.
+
+Best of all, depending on your needs:
+
+*You can often deploy a fully functional Jamstack site for free, indefinitely -- no hosting fees necessary.*
+
+From the perspective of a freelance developer, how cool is it to be able to pitch to your clients that once they make the jump, they won't have to pay for hosting anymore?!
+
+(And if there comes a time where they exceed their allotted free bandwidth, the better CaaS providers like Prismic offer gentle pricing tiers to scale up.)
+
+"OK, that sounds pretty cool. But how the heck does any of this actually work?"
+
+## Enter the Jamstack
+
+This will start to make more sense if you know that JAM is an acronym that stands for **JavaScript + APIs + Markup.**
+
+In this model, you get to reap all the benefits of the modern component-based **JavaScript** paradigm through the libraries/frameworks of your choice. *(Note: the J may stand for JS, but any language/library/framework that can render a front end will do.)*
+
+Data (your site's content) is fed in through an **API** -- in this case, that would be our headless CMS. For externally-hosted options, this is sometimes described as *CaaS:* "Content as a Service."
+
+And unlike a PHP-based setup which requires many calls from the client to the server to render a page, Jamstackers like to build with *static site generators* like Gatsby or Next.js (my personal favorite). These frameworks allow you to create sites where all of the rendering happens at *build time*, so the client is delivered a lightning-fast *static page* that doesn't need to interact with the server. This is the **Markup** in our JAM.
+
+That last part - the minimal static build - is one big reason why it's cheap and often free to host Jamstack sites. 
+
+The "presentation layer" - what gets called up when a client visits the site - takes up such a minuscule amount of space on the server that it's essentially irrelevant in terms of its bandwidth needs.
+
+One of the primary selling points of the Jamstack model is that it's **~highly distributed~** so instead of the whole shebang being served up by a single host, it relies on multiple decentralized sources coming together -- each of which can be configured, customized, scaled up/down, or swapped out as needed.
+
+*([Netlify](https://www.netlify.com), [Vercel](https://www.vercel.com), and [Heroku](https://www.heroku.com) are some of the bigger names in the realm of mostly-free hosting and deployment.)*
+
+## Should You Go Headless?
+
+Obviously I can't answer that question for you - it's up to you, your team, and the needs of the project/client to determine that.
+
+Like said: if you need something that *just works,* WordPress is a fantastic solution. Don't let the haters get you down.
+
+But if you're thinking about taking the plunge, here are some of the primary points to consider:
+
+#### PROS
+
+* Decoupling means greater autonomy for development & content creation teams
+* Most devs would agree that the modern JS ecosystem lends itself to the best developer experience
+* You have [*tons* of options for services to choose from](https://jamstack.org/headless-cms/), and they vary widely in their offerings
+* It's *future-proof,* meaning it will be easier to jump to a new service or build a new presentation layer in the future if needed
+* CaaS makes your content *reusable,* meaning it can be easily delivered to multiple touch-points and presented in different ways from a single CMS source
+* Hosting is often free/very cheap, and CaaS providers usually make it relatively painless to scale up as needed
+
+#### CONS
+
+* You are now at the mercy of multiple third-party services instead of a single host to deliver your site/app, meaning there are more ways that things could go wrong
+* Maybe it's not *more* work than setting up a WordPress site, but there are more moving parts to address and configure, which can be overwhelming
+* You have *tons* of options for services to choose from, and they vary widely in their offerings (this is both a Pro and a Con, but I'm adding it to the "con" pile because this means it will likely require a significant amount of research plus trial and error to find the best option for your project)
+* Since you're beholden to your new CaaS overlords to store and deliver your content, you will have to endure policy/feature/pricing changes that could potentially throw a wrench in your whole system at a moment's notice
+* It might not be as easy as you'd think/hope it'd be to migrate away from your chosen headless CMS in the future
+
+## The Takeaway (tl;dr)
+
+WordPress is a battle-tested traditional CMS that can handle pretty much anything you might toss at it. *Legacy* is clearly not the only reason why it powers the lion's share of the Internet.
+
+That said, if you're seeking a superior developer experience and greater flexibility, I think the Jamstack with a headless CMS is the way to go.
+
+It's also worth noting that I've mostly been describing cloud-hosted services here. Some headless CMS options like [Strapi](https://strapi.io/) are self-hosted, meaning you still have your decoupled layers, but they all live together on your server. This may be preferable for some applications.
+
+*Also* also: yes, headless WordPress is a thing. In essence, you get all the benefits of decoupling but you get to keep the wp-admin panel. I'm told WP has one of the best APIs out there! Worth considering.
+
+(My stack of choice? Next.js, styled with Tailwind, plugged into [Prismic CMS](https://www.prismic.io). Your mileage may vary, but this setup works great for me, and it's a breeze to set up!)
+
+I hope this introductory guide has helped to shed some light on this rather esoteric topic. If you have any questions - or you just want to take me to task for something I've misunderstood here - please have at it in the comments below!
+
+**What's your favorite headless CMS? I've love to know!**
+
+* * *
+
+*Thanks for reading! Is your team in need of a new JavaScript developer? Does your company value high-quality documentation & public-facing communication? Let's talk! [My DMs are open on Twitter](https://www.twitter.com/tanoaksam).*
