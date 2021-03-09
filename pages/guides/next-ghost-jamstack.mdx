@@ -261,8 +261,8 @@ export async function getStaticProps(context) {
 Breaking it down:
 * Import the ```getPosts``` function and Next's ```Link``` component
 * Render a component that receives post data and maps it to individual list items
-* Fetch all posts with ```getStaticProps()```, return ```props``` in the form of a ```posts``` object
-* ```revalidate``` to look for new post data every 1000 seconds
+* ```getStaticProps()``` tells Next to [generate this page at *build time*](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation)
+* ```revalidate``` allows for [incremental static regeneration](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration) by enabling Next to regenerate the page 1 second after a request comes in
 
 The ```<Link />``` component is not yet functional because we still need to build the page that will serve up our individual posts. Let's do that now. 
 
