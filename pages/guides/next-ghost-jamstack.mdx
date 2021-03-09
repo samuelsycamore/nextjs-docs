@@ -329,7 +329,6 @@ This is the final piece of the puzzle that we need for a fully functional blog:
 * Render a component that displays a blog post's featured image, title, and HTML content 
 * Create the slugs we need based on post data
 * Tell ```getSinglePost``` to go get the post that corresponds to the given slug, which then queries the ```GhostContentAPI``` for it
-* Return ```props```, ```revalidate``` every 1000 seconds
 
 <Callout>
 A note on ```dangerouslySetInnerHTML``` - the name is intended to be a reminder that this can be a dangerous way to operate. That said, this is the **preferred** way to render Ghost's content, and there's little risk of cross-site scripting attacks here.
