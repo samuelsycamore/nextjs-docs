@@ -295,7 +295,7 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }))
 
-  // { fallback: false } means posts not found should 404.
+  // "fallback: false" gives us a 404 if post not found
   return { paths, fallback: false }
 }
 
