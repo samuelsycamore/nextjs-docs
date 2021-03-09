@@ -168,7 +168,7 @@ Let's create a new folder in our root directory and call it ```lib```. Inside, c
 These files and folders can be named whatever you like, but it's a good idea to keep this ```posts.js``` file separate from your ```pages``` directory to prevent it from getting mixed in with content as your project grows.
 </Callout>
 
-Paste the following code into ```posts.js``` - be sure to swap in your details where appropriate:
+Paste the following code into ```posts.js``` - be sure to swap in your details where needed:
 
 ```jsx
 // lib/posts.js
@@ -177,8 +177,8 @@ import GhostContentAPI from "@tryghost/content-api";
 
 // Create API instance with site credentials
 const api = new GhostContentAPI({
-  url: 'https://YOURAPPNAME.herokuapp.com',
-  key: 'YOUR-GHOST-CONTENT-API-KEY',
+  url: 'https://YOURAPPNAME.herokuapp.com', // Replace with your URL
+  key: 'YOUR-GHOST-CONTENT-API-KEY', // Replace with your Content Key
   version: "v3"
 });
 
