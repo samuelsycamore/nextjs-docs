@@ -1,24 +1,9 @@
 # Sam Sycamore Technical Writer Portfolio
 
-## Built with [Nextra](https://nextra.vercel.app)
+This website was built using [Nextra](https://github.com/shuding/nextra), a unique "no-code" framework/theme built on top of Next.js.
 
-_Warning: this project is not production ready, API might change without notice._
+Nextra allows me to compose all of my pages and posts in Markdown/MDX, and organize them in simple JSON metadata files that integrate seamlessly with Next's file-system based routing.
 
-[![](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra&c=1)
-
-**Nextra** is a [Next.js](https://nextjs.org) and [MDX](https://mdxjs.com) powered, no-code site generator.
-
-![](/public/demo.png)
-
-## Development
-
-The code of Nextra is under the [`core`](https://github.com/shuding/nextra/tree/core) branch.
-
-## Themes
-
-- [nextra-theme-docs](https://github.com/vercel/swr-site) ([demo](https://swr.vercel.app))
-- [nextra-theme-blog](https://github.com/shuding/site) ([demo](https://shud.in))
-
----
+As a code-literate writer, I really appreciate being able to take a "docs as code" approach to this site by bringing the git workflow to my written content and doing all of my publishing directly through the terminal in my IDE.
 
 Created by [@shuding](https://github.com/shuding) and [@pacocoursey](https://github.com/pacocoursey) at [Vercel](https://vercel.com). Released under the MIT license.

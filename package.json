@@ -14,6 +14,8 @@
     "next": "^10.0.8",
     "nextra": "^0.4.1",
     "nextra-theme-docs": "^1.1.2",
+    "prism-react-renderer": "^1.2.0",
+    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
