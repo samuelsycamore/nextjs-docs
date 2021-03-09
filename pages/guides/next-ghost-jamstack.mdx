@@ -252,7 +252,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { posts },
-    revalidate: 1000,
+    revalidate: 1
   };
 }
 
@@ -306,8 +306,8 @@ export async function getStaticPaths() {
 }
 
 
-// Pass the page slug over to the "getSinglePost" function
-// In turn passing it to the posts.read() to query the Ghost Content API
+// Pass the page slug to "getSinglePost()" function
+// Which then passes it to "posts.read()" to query the GhostContentAPI
 export async function getStaticProps(context) {
   const post = await getSinglePost(context.params.slug)
 
@@ -319,7 +319,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { post },
-    revalidate: 1000
+    revalidate: 1
   }
 }
 ```
