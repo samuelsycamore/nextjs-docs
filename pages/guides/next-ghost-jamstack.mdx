@@ -1,23 +1,52 @@
 import Callout from 'nextra-theme-docs/callout'
+import { NextSeo } from 'next-seo';
+
+<NextSeo
+      title="Build a Jamstack Blog with Next.js, Ghost CMS, Vercel & Heroku"
+      description="Step-by-step walkthrough for assembling and deploying a fully functional decoupled blog."
+      canonical="https://www.samuelsycamore.com/guides/next-ghost-jamstack"
+      openGraph={{
+        url: 'https://www.samuelsycamore.com/guides/next-ghost-jamstack',
+        title: 'Build a Jamstack Blog with Next.js, Ghost CMS, Vercel & Heroku',
+        description: 'Step-by-step walkthrough for assembling and deploying a fully functional decoupled blog.',
+        images: [
+          {
+            url: 'https://www.samuelsycamore.com/og/next-ghost-jamstack-og-image.jpg',
+            width: 1200,
+            height: 630,
+            alt: 'Og Image Alt',
+          },
+        ],
+        site_name: 'Sam Sycamore',
+      }}
+      twitter={{
+        handle: '@tanoaksam',
+        site: '@samuelsycamore.com',
+        cardType: 'summary_large_image',
+      }}
+    />
 
 # Build a Jamstack Blog with Next.js, Ghost CMS, Vercel & Heroku
+
 ### March 8, 2021
 
 ![Van Gogh](/index.png)
 
-### The purpose of this guide is to get you up and running as quickly as possible with a robust Jamstack blog. 
+### The purpose of this guide is to get you up and running as quickly as possible with a robust Jamstack blog.
 
 Our final product will be skeletal and austere but fully functional.
 
 <Callout>
-No time for a detailed walkthrough? Just need the source code? You can grab the final product we'll be building over on my [Github](https://github.com/samuelsycamore/van-gogh-stack). Have fun!
+  No time for a detailed walkthrough? Just need the source code? You can grab
+  the final product we'll be building over on my
+  [Github](https://github.com/samuelsycamore/van-gogh-stack). Have fun!
 </Callout>
 
 ## Introducing the Van Gogh Stack
 
 OK I'll admit it's silly, but I needed a catchy name so hear me out:
 
-> **V**ercel + **N**ext.js + **G**host CMS + **H**eroku = **VNGH** *(read: "Van Gogh")*
+> **V**ercel + **N**ext.js + **G**host CMS + **H**eroku = **VNGH** _(read: "Van Gogh")_
 
 **The Van Gogh Stack** is my preferred combo for building and deploying [Jamstack](https://www.jamstack.org) sites. It uses the [Next.js](https://www.nextjs.org) framework deployed to [Vercel](https://www.vercel.com) for the presentation layer, and [Ghost](https://ghost.org/docs) set up as a headless CMS on [Heroku](https://www.heroku.com) for the data layer.
 
@@ -41,7 +70,7 @@ As soon as we're in, our next step is to head straight to the [Ghost on Heroku o
 
 ![Deploy on Heroku button](/deploy-button.png)
 
-*(The true heroes of our story here are [SNathJr](https://github.com/SNathJr/ghost-on-heroku) and [cobyism](https://github.com/cobyism/ghost-on-heroku). They assuredly suffered for this magical one-click installation so that we might thrive. God bless 'em.)*
+_(The true heroes of our story here are [SNathJr](https://github.com/SNathJr/ghost-on-heroku) and [cobyism](https://github.com/cobyism/ghost-on-heroku). They assuredly suffered for this magical one-click installation so that we might thrive. God bless 'em.)_
 
 Give it a click and you'll land on a page that looks like this:
 
@@ -49,22 +78,23 @@ Give it a click and you'll land on a page that looks like this:
 
 You don't need to worry about most of the options on the form, but these two are required:
 
-* **App Name** can be whatever you like.
-* **APP_PUBLIC_URL** determines the future domain of your CMS: change YOURAPPNAME to whatever you want in ```https://YOURAPPNAME.herokuapp.com``` (don't worry too much about this URL, it will only be for you)
+- **App Name** can be whatever you like.
+- **APP_PUBLIC_URL** determines the future domain of your CMS: change YOURAPPNAME to whatever you want in `https://YOURAPPNAME.herokuapp.com` (don't worry too much about this URL, it will only be for you)
 
 Scroll to the bottom of the page and click **Deploy app**. It may take a few minutes while Heroku builds the CMS.
 
 <Callout>
 Note: if this is your first Heroku app, you will be asked to provide credit card information. I don't love it either, but their free tier is generous enough that you may not ever need to scale up to a paid plan even if you're seeing pretty significant traffic - that's part of the magic of the Jamstack.
 
-And if you ever *do* need to scale up, [Ghost's documentation](https://ghost.org/docs/faq/clustering-sharding-multi-server/) recommends adding a content delivery network (CDN) into your stack rather than upgrading your CMS hosting (which should not be necessary). CDN integration is beyond the scope of this guide; just know that it is an option.
+And if you ever _do_ need to scale up, [Ghost's documentation](https://ghost.org/docs/faq/clustering-sharding-multi-server/) recommends adding a content delivery network (CDN) into your stack rather than upgrading your CMS hosting (which should not be necessary). CDN integration is beyond the scope of this guide; just know that it is an option.
+
 </Callout>
 
 Once the build is complete, we're pretty much done with Heroku. Congratulations! That's 1 of 4 down in our Van Gogh stack.
 
 ## Configure Ghost
 
-Now we can navigate to ```https://YOURAPPNAME.herokuapp.com/ghost``` to get our CMS up and running.
+Now we can navigate to `https://YOURAPPNAME.herokuapp.com/ghost` to get our CMS up and running.
 
 The first time you visit this page, you should see something like this:
 
@@ -75,7 +105,11 @@ After you've completed the installation, you'll land on your shiny new Ghost CMS
 ![Ghost CMS](/ghost-boilerplate.png)
 
 <Callout>
-By default, Ghost ships with [Handlebars templates](https://handlebarsjs.com/) to render your posts on the server. But since we're planning to go headless, it really doesn't matter what the server-side template looks like, because we won't actually be serving it up to our visitors. Don't worry about the design here.
+  By default, Ghost ships with [Handlebars templates](https://handlebarsjs.com/)
+  to render your posts on the server. But since we're planning to go headless,
+  it really doesn't matter what the server-side template looks like, because we
+  won't actually be serving it up to our visitors. Don't worry about the design
+  here.
 </Callout>
 
 The basic installation includes a set of dummy posts that will save us the trouble of making our own to test our connection to Next.js, once we get there. We'll leave them alone for now, but when you're ready to replace them with your own content, you can make them all disappear quickly by deleting the author 'Ghost' in the **Staff** section.
@@ -88,19 +122,20 @@ Navigate to **General** Settings and scroll down to the Advanced Settings at the
 
 ![Set your CMS to private](/advanced-private.png)
 
-This won't have any effect on your future presentation layer - since we are using Ghost as a headless CMS, these settings only apply to the Heroku app where the CMS lives. Making the CMS private ensures that Google won't get it mixed up with your *canonical* front end and start sending people to the back end of your site instead.
+This won't have any effect on your future presentation layer - since we are using Ghost as a headless CMS, these settings only apply to the Heroku app where the CMS lives. Making the CMS private ensures that Google won't get it mixed up with your _canonical_ front end and start sending people to the back end of your site instead.
 
 ### Add Custom Integration for API Key
 
-In order for Ghost to communicate with our Next.js front end (coming soon!), we'll need to be able to access the RESTful API. 
+In order for Ghost to communicate with our Next.js front end (coming soon!), we'll need to be able to access the RESTful API.
 
 Navigate to **Integrations** under Settings and click **+ Add custom integration**. Give it any name you like.
 
 ![Add custom integration](/custom-integration.png)
 
 On the other side of the naming form, you'll find three important bits of information - but we really only need to worry about two:
-* **Content API Key** - we will pass this string to our Next.js app to grab content from our CMS
-* **API URL** - we'll also need to specify where the content is coming from over in our Next app
+
+- **Content API Key** - we will pass this string to our Next.js app to grab content from our CMS
+- **API URL** - we'll also need to specify where the content is coming from over in our Next app
 
 Hang onto this info for now. That's all we need to do to get the ball rolling with Ghost.
 
@@ -108,11 +143,11 @@ We're halfway there already! Pretty painless so far, right?
 
 ## Build Next.js App
 
-*If you encounter any trouble during this stage in development, I would highly recommend referring to the [official Next.js documentation](https://nextjs.org/docs/api-reference/create-next-app), which is very thorough and well written. This will be a broad overview that assumes you're already familiar with the key features of Next.js.*
+_If you encounter any trouble during this stage in development, I would highly recommend referring to the [official Next.js documentation](https://nextjs.org/docs/api-reference/create-next-app), which is very thorough and well written. This will be a broad overview that assumes you're already familiar with the key features of Next.js._
 
 ### Create a New Project
 
-Fire up your terminal, ```cd``` to the folder where you want to create a new app, and run one of the following commands:
+Fire up your terminal, `cd` to the folder where you want to create a new app, and run one of the following commands:
 
 ```bash
 npx create-next-app
@@ -121,14 +156,15 @@ yarn create next-app
 ```
 
 <Callout>
-Unless explicitly specified via the ```--use-npm``` flag, ```create-next-app``` defaults to Yarn.
+  Unless explicitly specified via the ```--use-npm``` flag,
+  ```create-next-app``` defaults to Yarn.
 </Callout>
 
 You will be asked to give the project a name before the necessary packages start rolling in.
 
-After installation is complete, you can ```cd``` into the new app's folder and run ```yarn dev``` or ```npm run dev``` to fire up the local development environment at ```http://localhost:3000```.
+After installation is complete, you can `cd` into the new app's folder and run `yarn dev` or `npm run dev` to fire up the local development environment at `http://localhost:3000`.
 
-```create-next-app``` ships with a default landing page that looks like this:
+`create-next-app` ships with a default landing page that looks like this:
 
 ![Default Next landing page](/create-next-app.png)
 
@@ -154,7 +190,7 @@ According to Ghost's documentation:
 
 [Click here](https://ghost.org/docs/content-api/javascript/) for more details.
 
-Now, anytime we need to access our content data, we can ```import``` the helper to do some of the heavy lifting for us:
+Now, anytime we need to access our content data, we can `import` the helper to do some of the heavy lifting for us:
 
 ```jsx
 import GhostContentAPI from '@tryghost/content-api'
@@ -162,124 +198,127 @@ import GhostContentAPI from '@tryghost/content-api'
 
 ### Accessing Content Data
 
-Let's create a new folder in our root directory and call it ```lib```. Inside, create a new file called ```posts.js```. This file will hold the functions we need to pull in our content data from Ghost.
+Let's create a new folder in our root directory and call it `lib`. Inside, create a new file called `posts.js`. This file will hold the functions we need to pull in our content data from Ghost.
 
 <Callout>
-These files and folders can be named whatever you like, but it's a good idea to keep this ```posts.js``` file separate from your ```pages``` directory to prevent it from getting mixed in with content as your project grows.
+  These files and folders can be named whatever you like, but it's a good idea
+  to keep this ```posts.js``` file separate from your ```pages``` directory to
+  prevent it from getting mixed in with content as your project grows.
 </Callout>
 
-Paste the following code into ```posts.js``` - be sure to swap in your details where needed:
+Paste the following code into `posts.js` - be sure to swap in your details where needed:
 
 ```jsx
 // lib/posts.js
 
-import GhostContentAPI from "@tryghost/content-api";
+import GhostContentAPI from '@tryghost/content-api'
 
 // Create API instance with site credentials
 const api = new GhostContentAPI({
   url: 'https://YOURAPPNAME.herokuapp.com', // Replace with your URL
   key: 'YOUR-GHOST-CONTENT-API-KEY', // Replace with your Content Key
-  version: "v3"
-});
+  version: 'v3',
+})
 
 // Grab all of our posts from Ghost
 export async function getPosts() {
-    return await api.posts
-      .browse({
-        limit: "all"
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }
-  
-  // Grab each individual post from Ghost
-  export async function getSinglePost(postSlug) {
-    return await api.posts
-      .read({
-        slug: postSlug
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }
-  ```
+  return await api.posts
+    .browse({
+      limit: 'all',
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+}
+
+// Grab each individual post from Ghost
+export async function getSinglePost(postSlug) {
+  return await api.posts
+    .read({
+      slug: postSlug,
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+}
+```
 
 Let's break down what's going on here:
-* Import the ```GhostContentAPI``` helper
-* Create a new API instance
-* Grab a list of all posts from Ghost
-* Grab each individual post from Ghost
 
-We ```export``` the ```getPosts()``` and ```getSinglePost()``` functions so that we can use them throughout our site.
+- Import the `GhostContentAPI` helper
+- Create a new API instance
+- Grab a list of all posts from Ghost
+- Grab each individual post from Ghost
 
-The ```posts.browse()``` and ```posts.read()``` endpoints accessed by those last two functions have [many parameters to choose from](https://ghost.org/docs/content-api/javascript/), but this boilerplate setup will be enough to get us started.
+We `export` the `getPosts()` and `getSinglePost()` functions so that we can use them throughout our site.
+
+The `posts.browse()` and `posts.read()` endpoints accessed by those last two functions have [many parameters to choose from](https://ghost.org/docs/content-api/javascript/), but this boilerplate setup will be enough to get us started.
 
 ### Displaying All Blog Posts
 
-Next, let's give ```index.js``` a makeover so it will show us a list of our blog posts. Wipe the slate clean and paste in the following code:
+Next, let's give `index.js` a makeover so it will show us a list of our blog posts. Wipe the slate clean and paste in the following code:
 
 ```jsx
 // pages/index.js
 
-import { getPosts } from "../lib/posts";
-import Link from "next/link";
+import { getPosts } from '../lib/posts'
+import Link from 'next/link'
 
 const Index = (props) => (
   <ul>
     {props.posts.map((post) => (
       <li key={post.id}>
         <Link href={`/posts/${post.slug}`}>
-          <a>
-            {post.title}
-          </a>
+          <a>{post.title}</a>
         </Link>
       </li>
     ))}
   </ul>
-);
+)
 
-export default Index;
+export default Index
 
 export async function getStaticProps(context) {
-  const posts = await getPosts();
+  const posts = await getPosts()
 
   if (!posts) {
     return {
       notFound: true,
-    };
+    }
   }
 
   return {
     props: { posts },
-    revalidate: 1
-  };
+    revalidate: 1,
+  }
 }
-
 ```
 
 Breaking it down:
-* Import the ```getPosts``` function and Next's ```Link``` component
-* Render a component that receives post data and maps it to individual list items
-* ```getStaticProps()``` tells Next to [generate this page at *build time*](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation)
-* ```revalidate``` allows for [incremental static regeneration](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration) by enabling Next to regenerate the page 1 second after a request comes in
 
-The ```<Link />``` component is not yet functional because we still need to build the page that will serve up our individual posts. Let's do that now. 
+- Import the `getPosts` function and Next's `Link` component
+- Render a component that receives post data and maps it to individual list items
+- `getStaticProps()` tells Next to [generate this page at _build time_](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation)
+- `revalidate` allows for [incremental static regeneration](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration) by enabling Next to regenerate the page 1 second after a request comes in
+
+The `<Link />` component is not yet functional because we still need to build the page that will serve up our individual posts. Let's do that now.
 
 ### Rendering Individual Posts
 
-In our ```pages``` directory, let's create a new folder named ```posts```. Inside, create a new file and name it ```[slug].js```.
+In our `pages` directory, let's create a new folder named `posts`. Inside, create a new file and name it `[slug].js`.
 
 <Callout>
-The brackets in ```[slug].js``` are necessary to tell Next.js to treat this as a **dynamic route**. [Learn more about dynamic routes here](https://nextjs.org/docs/routing/dynamic-routes).
+  The brackets in ```[slug].js``` are necessary to tell Next.js to treat this as
+  a **dynamic route**. [Learn more about dynamic routes
+  here](https://nextjs.org/docs/routing/dynamic-routes).
 </Callout>
 
-Paste the following code into ```[slug.js]```:
+Paste the following code into `[slug.js]`:
 
 ```jsx
 // pages/posts/[slug].js
 
-import { getSinglePost, getPosts } from '../lib/posts';
+import { getSinglePost, getPosts } from '../lib/posts'
 
 const PostPage = (props) => {
   return (
@@ -291,7 +330,7 @@ const PostPage = (props) => {
   )
 }
 
-export default PostPage;
+export default PostPage
 
 export async function getStaticPaths() {
   const posts = await getPosts()
@@ -304,7 +343,6 @@ export async function getStaticPaths() {
   // "fallback: false" gives us a 404 if post not found
   return { paths, fallback: false }
 }
-
 
 // Pass the page slug to "getSinglePost()" function
 // Which then passes it to "posts.read()" to query the GhostContentAPI
@@ -319,26 +357,30 @@ export async function getStaticProps(context) {
 
   return {
     props: { post },
-    revalidate: 1
+    revalidate: 1,
   }
 }
 ```
 
 This is the final piece of the puzzle that we need for a fully functional blog:
-* Import ```getSinglePost``` & ```getPosts``` functions from ```posts.js```
-* Render a component that displays a blog post's featured image, title, and HTML content 
-* Create the slugs we need based on post data
-* Tell ```getSinglePost``` to go get the post that corresponds to the given slug, which then queries the ```GhostContentAPI``` for it
+
+- Import `getSinglePost` & `getPosts` functions from `posts.js`
+- Render a component that displays a blog post's featured image, title, and HTML content
+- Create the slugs we need based on post data
+- Tell `getSinglePost` to go get the post that corresponds to the given slug, which then queries the `GhostContentAPI` for it
 
 <Callout>
-A note on ```dangerouslySetInnerHTML``` - the name is intended to be a reminder that this can be a dangerous way to operate. That said, this is the **preferred** way to render Ghost's content, and there's little risk of cross-site scripting attacks here.
+  A note on ```dangerouslySetInnerHTML``` - the name is intended to be a
+  reminder that this can be a dangerous way to operate. That said, this is the
+  **preferred** way to render Ghost's content, and there's little risk of
+  cross-site scripting attacks here.
 </Callout>
 
 And with that, our new Next.js front end should now be plugged into our headless Ghost CMS!
 
 Before we get too excited, let's add one tiny fix to our CSS. We've asked Ghost to send over some images in our posts, but we haven't specified their dimensions, so they're going to be massive and unwieldy if we don't address that.
 
-Paste this snippet into ```styles/globals.css``` as a quick fix:
+Paste this snippet into `styles/globals.css` as a quick fix:
 
 ```css
 img {
@@ -349,13 +391,13 @@ img {
 
 This will ensure that the images play nice with the rest of the content in the posts.
 
-Now, if we run ```yarn dev``` or ```npm run dev```, we should see something like this:
+Now, if we run `yarn dev` or `npm run dev`, we should see something like this:
 
 ![Ghost connected to Next.js](/ghost-blog.png)
 
-Isn't it beautiful? Truly a sight to behold! The fact that this data is now showing up on our front end means we've successfully integrated our decoupled layers. That's no small feat! 
+Isn't it beautiful? Truly a sight to behold! The fact that this data is now showing up on our front end means we've successfully integrated our decoupled layers. That's no small feat!
 
-If we click on any of the list items we should be taken to the corresponding dummy post. 
+If we click on any of the list items we should be taken to the corresponding dummy post.
 
 If you get hung up at this step, make sure that your directory names, slugs, props, and routing all line up correctly. I've tried to keep the demo project as skeletal as possible while still setting you up for an organized environment as you build it out from here.
 
